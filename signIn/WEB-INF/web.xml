@@ -1,0 +1,26 @@
+<web-app>
+
+    <servlet>
+        <servlet-name>signIn</servlet-name>
+        <servlet-class>myProject.SignIn</servlet-class>
+
+        <init-param>
+            <param-name>email</param-name>
+            <param-value>hello@world.com</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>1234</param-value>
+            <!-- of course the password must be hashed, but it's just a demonstration -->
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>hello</servlet-name>
+        <jsp-file>/WEB-INF/jsp/hello.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>hello</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
+</web-app>
